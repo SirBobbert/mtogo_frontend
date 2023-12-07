@@ -51,10 +51,7 @@ const RestaurantDetails = () => {
   };
 
   const calculateTotalPrice = () => {
-    return cart.reduce(
-      (total, item) => total + item.quantity * item.price,
-      0
-    );
+    return cart.reduce((total, item) => total + item.quantity * item.price, 0);
   };
 
   const handlePurchase = async () => {
@@ -115,6 +112,7 @@ const RestaurantDetails = () => {
                         </p>
                         <p className="card-text">Price: {menuItem.price}</p>
                         <button
+                          id="addToCartButton"
                           className="btn btn-primary"
                           onClick={() =>
                             handleAddToCart(
